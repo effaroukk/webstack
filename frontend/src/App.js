@@ -44,6 +44,14 @@ function App() {
         </Routes>
 
         <Footer />
+
+        {/* About section at the bottom right */}
+        <div className="about-section">
+          <p>
+            This is a simple web-based digital journal app, created with React, Node.js, and MongoDB. As a beginner in coding, this project marks my first attempt at building a full-stack application. I am learning step by step, and this is my way of improving my skills and making something unique. 
+            <a href="https://github.com/effaroukk/webstack.git" target="_blank" rel="noopener noreferrer" className="about-link">About Me</a>
+          </p>
+        </div>
       </div>
     </Router>
   );

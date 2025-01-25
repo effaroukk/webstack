@@ -140,15 +140,10 @@ Contributions are welcome! Please follow these steps:
 
 ---
 
-## License
-This project is licensed under the MIT License - see the [LICENSE](LICENSE) file for details.
-
----
-
 ## Contact
 If you have any questions or suggestions, feel free to reach out:
 
-- GitHub: [yourusername](https://github.com/yourusername)
-- Email: your-email@example.com
+- GitHub: [effarouk](https://github.com/effaroukk/webstack.git)
+- Email: efqay1@gmail.com
 
 

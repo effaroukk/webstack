@@ -9,13 +9,28 @@ const Auth = () => {
     };
 
     const handleSubmit = async (endpoint) => {
-        const response = await fetch(`http://localhost:5000/api/auth/${endpoint}`, {
-            method: 'POST',
-            headers: { 'Content-Type': 'application/json' },
-            body: JSON.stringify(formData),
-        });
-        const data = await response.json();
-        setMessage(data.message || data.error);
+        if (!formData.username || !formData.password) {
+            setMessage('Please fill in all fields');
+            return;
+        }
+
+        try {
+            const response = await fetch(`http://localhost:5000/api/auth/${endpoint}`, {
+                method: 'POST',
+                headers: { 'Content-Type': 'application/json' },
+                body: JSON.stringify(formData),
+            });
+
+            if (!response.ok) {
+                throw new Error(`Request failed: HTTP error! status: ${response.status}`);
+            }
+
+            const data = await response.json();
+            setMessage(data.message || data.error);
+        } catch (error) {
+            setMessage('Something went wrong. Please try again.');
+            console.error(error);
+        }
     };
 
     return (
